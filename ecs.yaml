@@ -1,0 +1,14 @@
+apiVersion: ecs.aws.upbound.io/v1beta1 
+kind: Cluster
+metadata:
+  name: demo-ecs-cluster
+  annotations:
+    crossplane.io/external-name: demo-ecs-cluster 
+spec:
+  forProvider:
+    region: us-east-1
+    tags:
+      Environment: demo
+      ManagedBy: crossplane
+      Purpose: retail-analytics
+      DataSource: online-retail
